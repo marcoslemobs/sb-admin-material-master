@@ -1,0 +1,21 @@
+<section>
+  <form>
+<!-- <form method="post" #frm="ngForm" (ngSubmit)="criar(form)"> -->
+  <div>
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" id="nome" name="nome" placeholder="Nome">
+   <!-- <mat-form-field class="example-full-width">
+      <input matInput type="text" id="nome" name="nome" placeholder="Nome"
+      [(ngModel)]="contato.nome" required> -->
+    </mat-form-field>
+    </div>
+    <div>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Emprego">
+    </mat-form-field>
+    </div>
+    <button type="submit">Cadastrar</button> 
+    <!-- <button type="submit" [disabled]="frm.invalid">Cadastrar</button> -->
+
+  </form>
+  </section>
