@@ -2,20 +2,22 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { NgModule } from '@angular/core';
 
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+
 
 import {
     MatButtonModule,
     MatIconModule,
     MatListModule,
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule, MatTableModule, MatPaginatorModule, MatSortModule
 } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
 
 import { ServiceService } from './shared';
 
@@ -33,8 +35,9 @@ export const createTranslateLoader = (http: HttpClient) => {
 };
 
 @NgModule({
-    declarations: [AppComponent],
+    declarations: [AppComponent, ],
     imports: [
+       
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
@@ -49,11 +52,12 @@ export const createTranslateLoader = (http: HttpClient) => {
             }, 
         }),
         FormsModule,
-        /**
-        ServiceService,
-        */
+        MatTableModule,
+        MatPaginatorModule,
+        MatSortModule,
+        
     ],
-    providers: [],
+    providers: [ServiceService],
     bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -1,30 +1,40 @@
 import { Component, OnInit } from '@angular/core';
-
-import { ServiceService } from '../../shared/services/service.service'
 import { FormGroup } from '@angular/forms';
+import { NgModule } from '@angular/core';
+
+
+import { ServiceService } from '../../shared';
+
+
 
 @Component({
   selector: 'app-cadastrar',
   templateUrl: './cadastrar.component.html',
-  styleUrls: ['./cadastrar.component.scss']
+  styleUrls: ['./cadastrar.component.scss'],
+  
+  
 })
 export class CadastrarComponent implements OnInit {
 
-  contatos: Array<any>;
-  contato: any;
+  users: Array<any>;
+  user: any;
 
   constructor(private service : ServiceService) { }
 
 
   ngOnInit() {
-    this.contato = {};
+    this.user = {};
   }
 
-  criar(frm:FormGroup){
-    this.service.criar(this.contato);
+  criar(frm: FormGroup){
+    this.service.criar(this.user).subscribe(resposta => {
+      this.users.push(resposta);
+
 
     frm.reset();
 
-  }
+    });
+    
 
+}
 }

@@ -18,6 +18,9 @@ import { NavComponent } from './nav/nav.component';
 import { Screen2Component } from './screen2/screen2.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 
+
+
+
 @NgModule({
     imports: [
         CommonModule,
@@ -29,9 +32,16 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
         MatInputModule,
         MatMenuModule,
         MatListModule,
-        TranslateModule
+        TranslateModule,
+  
+
+        
+        
+       
     ],
-    declarations: [Screen2Component, LayoutComponent, NavComponent, TopnavComponent, SidebarComponent, CadastrarComponent, ]
+    declarations: [Screen2Component, LayoutComponent, NavComponent, TopnavComponent, SidebarComponent, CadastrarComponent,]
 
 })
+
 export class LayoutModule { }
+
