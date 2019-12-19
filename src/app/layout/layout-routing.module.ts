@@ -8,6 +8,7 @@ import { Screen2Component } from './screen2/screen2.component';
 import { CadastrarComponent } from './cadastrar';
 
 
+
     const routes: Routes = [
     {
         path: '',
